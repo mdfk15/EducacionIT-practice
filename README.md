@@ -1,2 +1,2 @@
 # EducacionIT-practice
-Projects and task do in EducacionIT 
+Projects and task done in EducacionIT 
