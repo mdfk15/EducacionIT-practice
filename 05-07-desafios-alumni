@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Desafios
+
+# Ejercicio 1
+nota_uno = 10
+nota_dos = 6
+nota_tres = 8
+#suma = (nota_uno+nota_dos+nota_tres)
+print(f"Promedio: {int((nota_uno+nota_dos+nota_tres)/3)}") #:.2f}") ==> to format float
+
+# Ejercicio 2
+edad = int(input("Edad?: "))
+if 0 <= edad < 18:
+	print("Eres menor de edad!")
+elif 18 <= edad <= 110:
+	print("Eres mayor de edad...")
+else: 
+	print("Error en el input")
+
+# Ejercicio 3
+cobros = 300 * 6 + 500 * 4 + 900 * 2
+promedio = cobros / 12
+
+if promedio <= 300:
+	print("Su sueldo es bajo")
+elif promedio <=900:
+	print("Su sueldo es normal")
+else:
+	print("Sueldo mayor al promedio")
+print(f"Su sueldo es: {promedio}")

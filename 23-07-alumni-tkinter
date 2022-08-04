@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#  
+#  Copyright 2022 mdfk <mdfk@Elite>
+
+import tkinter as tk
+
+def sumar():
+	caja_total.delete(0,tk.END)
+	total = int(caja_0.get()) + int(caja_1.get())
+	caja_total.insert(1,total)
+
+ventana = tk.Tk()
+ventana.config(width=450,height=170)
+ventana.title("Calculadora suma")
+ventana.resizable(0,0)
+etiqueta = tk.Label(text="Practicas Alumni - EducacionIT")
+etiqueta.place(x=110,y=10)
+
+############ Campo 1 #############
+caja_0 = tk.Entry()
+caja_0.place(x=80,y=50,width=170,height=25)
+etiqueta = tk.Label(text="Valor 1:")
+etiqueta.place(x=20,y=50)
+
+etiqueta = tk.Label(text="+")
+etiqueta.place(x=155,y=75)
+
+############ Campo 2 #############
+caja_1 = tk.Entry()
+caja_1.place(x=80,y=95,width=170,height=25)
+etiqueta = tk.Label(text="Valor 2:")
+etiqueta.place(x=20,y=95)
+
+############ Boton ##############
+boton = tk.Button(text="=",command=sumar)
+boton.place(x=260,y=65,width=60,height=45)
+
+############ Boton ##############
+caja_total = tk.Entry()
+caja_total.place(x=330,y=68,width=90,height=40)
+
+ventana.mainloop()

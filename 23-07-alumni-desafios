@@ -1,0 +1,36 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+#
+#  Copyright 2022 mdfk <mdfk@Elite>
+print("Practicas Alumni - EducacionIT\n")
+
+################ Ejercio 1 ################
+# ~ def forzar_int(numero):
+	# ~ while True:
+		# ~ if numero.isdecimal():
+			# ~ return int(numero)
+		# ~ else:
+			# ~ numero = input("Ingrese numero denuevo: ")
+
+# ~ numero = input("Ingrese numero: ")
+# ~ print(type(forzar_int(numero)))
+
+################ Ejercio 3 ################
+def comprobar_int(variable):
+	while True:
+		dato = input(f"Ingrese {variable}: ")
+		if dato.isdecimal():
+			return int(dato)
+		else:
+			print("Error en el ingreso\n")
+		
+################ Ejercio 2 ################
+def calcular_area(a,b):
+	return f"Altura: {a} - Base: {b} = {a*b}"
+	
+altura = comprobar_int("altura")
+base = comprobar_int("base")
+
+print(calcular_area(altura,base))
+		
+		

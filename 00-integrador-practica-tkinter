@@ -1,0 +1,109 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+print("Practicas Alumni - EducacionIT\n")
+
+import tkinter as tk
+
+def comprobar_int(dato):
+	while dato.isdecimal == False:
+		print("Error en el ingreso\n")
+		dato = input(f"Intente denuevo: ")
+	return int(dato)
+	
+"""
+Una universidad desea crear un programa para
+contabilizar los cursos que tiene cada alumno.
+Para ello se debe realizar primero una aplicación
+de consola la cual debe solicitar el nombre de un
+alumno y la cantidad de cursos en la que se
+encuentra inscripto.
+Estos dos valores deben almacenarse como una
+lista de dos elementos (el nombre y la cantidad
+de cursos como un número entero) en una lista
+de alumnos.
+"""
+
+# Estructura y modelo de datos
+alumnos = {"Romina":"5","Pedro":"3","Josefa":"13"}
+
+menu = """
+      Menu de opciones
+----------------------------
+1 - Ingresar un alumno
+2 - Mostrar lista de alumnos
+3 - Buscar info alumno
+4 - Salir
+"""
+		
+def comprobar_str(dato):
+	# ~ while dato == "":
+	if dato == "":
+		dato = "Error"
+		# ~ dato = input(f"Intente denuevo: ")
+	return dato
+			
+def mostrar_alumnos(alumnos):
+	if alumnos:
+		print(f"\nLista de alumno(s): ")
+		for nombre,cursos in alumnos.items():
+			print(f"{nombre} - {cursos} cursos")
+	else:
+		print("Alumno(s) no registrado(s)")
+
+# Funciones TKinter
+def clic(tecla):
+	if tecla == "lista":
+		mostrar_alumnos(alumnos)
+	elif tecla == "agregar":
+		nombre_alumno = comprobar_str(nombre.get())
+		curso_alumno = comprobar_str(cursos.get())
+		if nombre_alumno == "Error":
+			print("Error")
+		else:
+			alumnos[nombre_alumno] = curso_alumno
+			print("Alumno ingresado con exito")
+	elif tecla == "cursos":
+		nombre_alumno = comprobar_str(nombre.get())
+		if nombre_alumno == "Error":
+			print("Alumno not found")
+		else:
+			print(f"{nombre_alumno} - {alumnos[nombre_alumno]} cursos")
+
+# Ventana para contener la calculadora
+ventana = tk.Tk()
+ventana.title("Formulario cursos")
+ventana.config(width=350, height=290, bg="Light Steel Blue")
+ventana.resizable(0,0)
+
+etiqueta = tk.Label(text="Alumni - Proyecto integrador", bg="Light Steel Blue")
+etiqueta.place(x=85,y=20)
+
+# Values
+ancho = 16
+alto = 2
+
+# Botones
+boton = tk.Button(text="Ver lista de alumnos", width=ancho, height=alto, command=lambda:clic("lista"))
+boton.place(x=15, y=70)
+
+boton = tk.Button(text="Agregar a la lista", width=ancho, height=alto, command=lambda:clic("agregar"))
+boton.place(x=15, y=220)
+
+boton = tk.Button(text="Ver cantidad de cursos", width=ancho, height=alto, command=lambda:clic("cursos"))
+boton.place(x=180, y=220)
+
+# Input
+nombre = tk.Entry()
+nombre.place(x=135,y=137,width=195,height=25)
+etiqueta = tk.Label(text="Nombre y apellido: ", bg="Light Steel Blue")
+etiqueta.place(x=15,y=140)
+
+cursos = tk.Entry()
+cursos.place(x=135,y=167,width=100,height=25)
+etiqueta = tk.Label(text="Cursos: ", bg="Light Steel Blue")
+etiqueta.place(x=15,y=170)
+
+ventana.mainloop()
+	
+		

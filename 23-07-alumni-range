@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  Copyright 2022 mdfk <mdfk@Elite>
+  
+print("Practicas Alumni - EducacionIT\n")
+
+############### Exercice 1 ##################
+while True:
+	rango_inicio = input("Inicio desde: ")
+	if rango_inicio.isdigit:
+		rango_inicio = int(rango_inicio)
+		break
+while True:
+	rango_fin = input("Fin en: ")
+	if rango_fin.isdigit:
+		rango_fin = int(rango_fin)
+		break		
+
+multiplo = []
+for n in range(rango_inicio,rango_fin,1):
+	if n%3==0 or n%5==0:
+		multiplo.append(n)
+print(multiplo)

@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+print("Practicas Alumni - EducacionIT\n")
+
+############ Ejercicio 1 #############
+nombres = ["Susana","Alejandro","Roberto"]
+print(nombres)
+nombres.insert(2,"Paula")
+print(nombres)
+nombres.append("Silvina")
+print(nombres)
+

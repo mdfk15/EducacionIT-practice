@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+print("Practicas Alumni - EducacionIT\n")
+
+############ Ejercicio 1 #############
+matriz = [[3.3, 6.1, 4.0], [4.9, 5.7, 6.4]]
+for n in matriz:
+	print(n)
+
+while True:
+	column = input("Ingrese numero de la columna: ")
+	if column.isdigit() and int(column) <= 2:
+		column = int(column)
+		break
+	else:
+		print("Error en el input. Vuelva a intentar\n")
+		
+while True:
+	line = input("Ingrese numero de la fila: ")
+	if line.isdigit() and int(line) <= 1:
+		line = int(line)
+		break
+	else:
+		print("Hubo un error en el ingreso. Intente denuevo\n")
+
+#print(matriz[1][2])		
+print(f"Resultado en matriz: {matriz[line][column]}")

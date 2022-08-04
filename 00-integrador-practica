@@ -1,0 +1,81 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+print("Practicas Alumni - EducacionIT\n")
+
+def comprobar_int(dato):
+	while dato.isdecimal == False:
+		print("Error en el ingreso\n")
+		dato = input(f"Intente denuevo: ")
+	return int(dato)
+	
+"""
+Una universidad desea crear un programa para
+contabilizar los cursos que tiene cada alumno.
+Para ello se debe realizar primero una aplicación
+de consola la cual debe solicitar el nombre de un
+alumno y la cantidad de cursos en la que se
+encuentra inscripto.
+Estos dos valores deben almacenarse como una
+lista de dos elementos (el nombre y la cantidad
+de cursos como un número entero) en una lista
+de alumnos.
+"""
+
+# Estructura y modelo de datos
+alumnos = {"Romina":"5","Pedro":"3","Josefa":"13"}
+
+menu = """
+      Menu de opciones
+----------------------------
+1 - Ingresar un alumno
+2 - Mostrar lista de alumnos
+3 - Buscar info alumno
+4 - Salir
+"""
+		
+def comprobar_str(dato):
+	while dato == "":
+		print("Error en el ingreso\n")
+		dato = input(f"Intente denuevo: ")
+	return dato	
+			
+def mostrar_alumnos(alumnos):
+	if alumnos:
+		print(f"\nLista de alumno(s): ")
+		for nombre,cursos in alumnos.items():
+			print(f"{nombre} - {cursos} cursos")
+	else:
+		print("Alumno(s) no registrado(s)")
+
+while True:
+	print(menu)
+	opcion = input("Ingresar opcion: ")
+	comprobar_int(opcion)
+	
+	if opcion == "1":
+		nombre = input("Ingrese el nombre: ")
+		nombre = comprobar_str(nombre)
+		cursos = input("Ingrese cantidad de cursos: ")
+		cursos = int(comprobar_int(cursos))
+		alumnos[nombre] = cursos
+		print("Alumno ingresado con exito")
+		
+	elif opcion == "2":
+		mostrar_alumnos(alumnos)
+		
+	elif opcion == "3":
+		alumno = input("Ingrese nombre del alumno: ")
+		comprobar_str(alumno)
+		if alumno in alumnos:
+			print(f"{alumno} - {alumnos[alumno]}")
+		else:
+			print("Alumno no registrado")
+		
+	elif opcion == "4":
+		print("Gracias por utilizar el sistema")
+		break
+		
+	else:
+		print("Opcion incorrecta, vuelva a intentarlo.")
+		

@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+print("Practicas Alumni - EducacionIT\n")
+
+def comprobar_int(dato):
+	while dato.isdecimal == False:
+		print("Error en el ingreso\n")
+		dato = input(f"Intente denuevo: ")
+	return int(dato)
+	
+import time, random
+
+################ Ejercicio 1 ################
+# ~ for n in range(11):
+	# ~ print(n)
+	# ~ time.sleep(1)
+
+################ Ejercicio 2 ################
+print("""---Menu---
+1 - Tirar dados
+2 - Salir
+""")
+while True:
+	opcion = input(">>> ")
+
+	if opcion == "1":
+		print(random.randrange(6)+1)
+	elif opcion == "2":
+		break
+	else:
+		print("Error en el input")

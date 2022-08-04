@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  Copyright 2022 mdfk <mdfk@Elite>
+  
+print("Practicas Alumni - EducacionIT\n")
+
+############### Exercice 1 ##################
+def suma(a,b):
+	return f"{a} + {b}: {a+b}"
+
+while True:
+	uno = input("Ingresar valor 1: ")
+	if uno.isdecimal():
+		uno = int(uno)
+		break
+		
+while True:
+	dos = input("Ingresar valor 2: ")
+	if dos.isdecimal():
+		dos = int(dos)
+		break
+
+print(suma(uno,dos))

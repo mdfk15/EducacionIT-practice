@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#  
+#  Copyright 2022 mdfk <mdfk@Elite>
+
+
+import tkinter as tk
+
+def pasar_a_celcius():
+	caja_celsius.delete(0,tk.END)
+	temp = (float(caja_farenheit.get()) - 32) / 1.8
+	temp = f"{temp:.1f}"
+	caja_celsius.insert(3,temp)
+	
+def pasar_a_farenheit():
+	caja_farenheit.delete(0,tk.END)
+	temp = float(caja_celsius.get()) * 1.8 + 32
+	temp = f"{temp:.1f}"
+	caja_farenheit.insert(3,temp)
+	
+ventana = tk.Tk()
+ventana.config(width=400,height=200)
+ventana.title("Formulario")
+ventana.resizable(0,0)
+etiqueta = tk.Label(text="Practicas Alumni - EducacionIT")
+etiqueta.place(x=110,y=10)
+
+############ Campo celcius #############
+caja_celsius = tk.Entry()
+caja_celsius.place(x=150,y=50,width=220,height=25)
+etiqueta = tk.Label(text="Temperatura (ºC):")
+etiqueta.place(x=30,y=50)
+
+############ Campo celcius #############
+caja_farenheit = tk.Entry()
+caja_farenheit.place(x=150,y=90,width=220,height=25)
+etiqueta = tk.Label(text="Temperatura (ºF):")
+etiqueta.place(x=30,y=90)
+
+############ Boton #############
+boton = tk.Button(text="Pasar a Farenheit",command=pasar_a_farenheit)
+boton.place(x=30,y=130,width=160,height=50)
+boton = tk.Button(text="Pasar a Celcius",command=pasar_a_celcius)
+boton.place(x=210,y=130,width=160,height=50)
+
+ventana.mainloop()

@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+print("Practicas Alumni - EducacionIT\n")
+
+############ Ejercicio 1 #############
+nombres = ["Susana", "Carol","Marcos","Celeste"]
+
+for name in nombres:
+	print(name)

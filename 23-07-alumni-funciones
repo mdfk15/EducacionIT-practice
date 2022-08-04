@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+#
+#  Copyright 2022 mdfk <mdfk@Elite>
+print("Practicas Alumni - EducacionIT\n")
+
+def comprobar_int(variable):
+	while True:
+		dato = input(f"Ingrese {variable}: ")
+		if dato.isdecimal():
+			return int(dato)
+		else:
+			print("Error en el ingreso\n")
+
+################ Ejercio 1 ################
+def rango(d,h,i):
+	list_func = [d]
+	while d < h-1:
+		d += i
+		list_func.append(d)
+	return list_func
+	
+lista = rango(1,11,2)
+print(lista)

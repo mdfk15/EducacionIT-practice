@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+# Script que pide distancia en kms y un tiempo en hs y devuelve
+# la velocidad. Usar funciones
+
+def promedio_volecidad(distancia,tiempo):
+	print(f"La velocidad promedio es: {distancia/tiempo}kms/hora")	
+
+distancia = int(input("Ingrese la distancia: "))
+tiempo = int(input("Ingrese el tiempo estimado: "))
+
+promedio_volecidad(distancia,tiempo)
+
+"""
+while True:
+	distancia = input("Ingrese la distancia: ")
+	if diste.isdigit() and int(diste) > 0:
+		diste = int(diste)
+		break
+while True:
+	tiempo = input("Ingrese el tiempo estimado: ")
+	if not tiempo.isdigit() and tiempo > 0:
+		break
+"""
+
+# A lo profe
+#  ingresar_datos()
+#  calcular_velocida()
+#  imprimir()
+print(f"\nProfe metode")
+
+def ingreso_valores(dato):
+	return int(input(f"Ingrese {dato}: "))
+
+def calculo_velocidad(d,t):
+	return d/t
+
+def imprimir(v):
+	print(f"La velocidad promedio es {v} kms/hs")
+
+distancia = ingreso_valores("distancia")
+tiempo = ingreso_valores("tiempo")
+velocidad = calculo_velocidad(distancia,tiempo)
+imprimir(velocidad)
+

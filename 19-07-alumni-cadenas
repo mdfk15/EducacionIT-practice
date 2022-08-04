@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+########### Ejercio 1 ############
+
+print("Practicas EducacionIT\n")
+
+########### Ejercio 2 ############
+while True:
+	nombre = str(input("Ingrese su nombre: "))
+	if nombre == "":
+		print("Error en el ingreso. Vuelva a intentar")
+	else:
+		break
+##################################
+
+########### Ejercio 3 ############
+while True:
+	edad = input("Ingrese su edad: ")
+	if edad.isdigit() and int(edad) > 18:
+		edad = int(edad)
+		print(f"Usted tiene {edad}, es mayor de edad.")
+		break
+	elif edad.isdigit() and int(edad) < 18:
+		print(f"Usted tiene {edad}, es menos de edad.")
+		break
+	else:
+		print("Error en el ingreso. Vuelva a intentarlo")
+
+##################################
+
+print("Comparador practicas EducacionIT\n")
+
+print(f"""
+Bienvenido {nombre}, al comparador de cadenas de datos
+By mdfk escrito en python.
+""")
+
+cadena_uno = input("Ingrese cadena 1: ")
+cadena_dos = input("Ingrese cadena 2: ")
+
+if cadena_uno == cadena_dos:
+	comparacion = "iguales"
+else:
+	comparacion = "diferentes"
+	
+print(f"\nLos valores son {comparacion}")
+
+###################################

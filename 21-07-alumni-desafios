@@ -1,0 +1,59 @@
+#!/usr/bin/env python
+# -*- conding: utf-8 -*-
+
+print("Practicas Alumni - EducacionIT\n")
+
+############### Exercice 1 ##################
+# ~ while True:
+	# ~ user = input("Ingrese su rol (admin o profesor): ")
+	# ~ user = user.lower()
+	# ~ if user == "admin":
+		# ~ break
+	# ~ elif user == "profesor":
+		# ~ break
+	# ~ else:
+		# ~ print("Error al ingresar la rol, vuelva a intentarlo\n")
+
+# ~ while True:
+	# ~ password = str(input("Ingrese la contraseña: "))
+	# ~ if password == "1234":
+			# ~ break
+	# ~ else:
+		# ~ print("Error en el ingreso de contraseña, vuelva a intenrarlo\n")
+		
+# ~ while True:
+	# ~ name = input("Ingrese su nombre: ")
+	# ~ if len(name) >= 3:
+		# ~ print(f"Saludos {name}, gracias por utilizar el programa")
+		# ~ break
+	# ~ else:
+		# ~ print("Error en ingreso de nombre, vuelva a intentarlo.\n")
+	
+############### Exercice 2 ##################
+
+# ~ while True:
+	# ~ year = input("Ingrese el año: ")
+	# ~ if year.isdigit and len(year) == 4:
+		# ~ year = int(year)
+		# ~ if year%400 == 0 or year%4 == 0 and year%100 != 0:
+			# ~ print("El año es biciesto!.")
+			# ~ break
+		# ~ else:
+			# ~ print("El año no es biciesto.")
+	# ~ else:
+		# ~ print("Error en el ingreso del año, vuelva a intentarlo")
+
+############### Exercice 3 ##################
+
+while True:
+	quantite = input("Ingrese la cantidad de personas: ")
+	if quantite.isdigit:
+		quantite = int(quantite)
+		break
+
+print("---Ingrese los nombre---")
+names = []
+for n in range(quantite):
+	names.append(input(f"{n+1}: "))
+
+print(names)
